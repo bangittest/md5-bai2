@@ -6,5 +6,13 @@
 </head>
 <body>
 <h1> dddddddddd</h1>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+       aria-expanded="false" th:text="#{language}"></a>
+    <div class="dropdown-menu" aria-labelledby="dropdownId">
+        <a class="dropdown-item" href="/student?lang=en" th:text="#{english}"></a>
+        <a class="dropdown-item" href="/?lang=vi" th:text="#{vietnamese}"></a>
+    </div>
+</li>
 </body>
 </html>

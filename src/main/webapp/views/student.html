@@ -5,15 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-<a href="/add-student"> Them moi sinh vien</a>
+<a href="/add-student" th:text="#{add}"></a>
 <table class="table">
     <thead>
     <tr>
-        <th>id</th>
-        <th>name</th>
-        <th>age</th>
-        <th>classroom</th>
-        <th>Action</th>
+        <th>#</th>
+        <th th:text="#{name}"></th>
+        <th th:text="#{age}"></th>
+        <th th:text="#{classroom}"></th>
+        <th th:text="#{action}"></th>
     </tr>
     </thead>
     <tbody>
@@ -22,7 +22,7 @@
         <td th:text="${item.name}"></td>
         <td th:text="${item.age}"></td>
         <td th:text="${item.classRoom.classRoomName}"></td>
-        <td><a th:href="@{/edit-student/{id}(id=${item.id})}">Edit</a></td>
+        <td><a th:href="@{/edit-student/{id}(id=${item.id})}" th:text="#{edit}"></a></td>
     </tr>
     </tbody>
 </table>
