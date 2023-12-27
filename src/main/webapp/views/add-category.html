@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="create" th:object="${category}"  method="post">
+  <label> CategoryName:</label>
+  <input  type="text" th:field="*{categoryName}">
+  <label> Status</label>
+  <input  class="form-control" type="radio" th:field="*{categoryStatus}" value="1">
+  <input  class="form-control" type="radio" th:field="*{categoryStatus}" value="0">
+  <button type="submit"> them moi</button>
+</form>
+</body>
+</html>
